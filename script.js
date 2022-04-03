@@ -5,22 +5,33 @@ step3: each hole of golf loop based on answer
 step4: calculate based on answer
 */
 
-let firstName=prompt("What is your name?");
-console.log(firstName);
-let miniGolf=prompt("Would you like to play 3 or 6 holes of mini golf?");
+let name= prompt("What is your name?");
+let miniGolf= prompt("Would you like to play 3 or 6 holes of mini golf?");
 let total= 0;
-for (let n=3; n<20; n+=3) {
-    let putts=Number( prompt("How many putts?") );
-    total += putts;
+for (let i=1; i <= minigolf; i++) {
+    let numPutts=( prompt("How many putts per hole +1+") );
+    totalputts = totatlputts + parseInt(numpPutts);
 }
-console.log("Nice try, (firstName)...Your total par was: +(par)");
-console.log("Great job, (firstName)! Your total par was: -(par)");
-console.log("Good game, (firstName). Your total par was 0.")
 
-if (total >= 20) {
-alert("Nice try, (firstName)...Your total par was: +3");
-} else if (total <= 20) {
-    alert("Great job, (firstName)! Your total par was: -3");
+console.log(name);
+console.log(miniGolf);
+
+
+if (miniGolf == 3, numputts > 9) {
+    console.log("Nice try," + name +". your total par was: +"+totalputts+"");
+} 
+else if (miniGolf == 3, numputts > 9) {
+    console.log("Great job, + name +". your total par was: -"+totalputts+"");
 } else {
-    alert("Good game, (firstName). Your total par was 0.");
+    alert(`Good game,${name}. Your total par was 0.`)
+}
+
+
+if (miniGolf == 6, numputts > 18) {
+ console.log("Nice try," + name +".Your total par was: +"+totalputts+"");
+}
+ else if (miniGolf == 6, numputts < 18) {
+    console.log("Great job," +name +"! Your total par was: -"+totalputts+"");
+} else {
+    alert("Good game, "+ name". Your total par was 0.");
 }
