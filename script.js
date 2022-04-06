@@ -5,33 +5,24 @@ step3: each hole of golf loop based on answer
 step4: calculate based on answer
 */
 
+let Par= 0;
+let Total= 0;
 let name= prompt("What is your name?");
-let miniGolf= prompt("Would you like to play 3 or 6 holes of mini golf?");
-let total= 0;
-for (let i=1; i <= minigolf; i++) {
-    let numPutts=( prompt("How many putts per hole +1+") );
-    totalputts = totatlputts + parseInt(numpPutts);
-}
-
 console.log(name);
+let miniGolf= 0;
+miniGolf=parseInt(prompt("Hell0" + name +" Would you like to play 3 or 6 holes?"));
+Par= (3*miniGolf);
 console.log(miniGolf);
-
-
-if (miniGolf == 3, numputts > 9) {
-    console.log("Nice try," + name +". your total par was: +"+totalputts+"");
-} 
-else if (miniGolf == 3, numputts > 9) {
-    console.log("Great job, + name +". your total par was: -"+totalputts+"");
-} else {
-    alert(`Good game,${name}. Your total par was 0.`)
+for (let i= 0; i < miniGolf; i++) {
+    Total= Total + parseInt(prompt(`How many putts for hole${i + 1}? (par 3)`));
 }
 
+Addsum= Total - Par;
+console.log(Addsum);
 
-if (miniGolf == 6, numputts > 18) {
- console.log("Nice try," + name +".Your total par was: +"+totalputts+"");
-}
- else if (miniGolf == 6, numputts < 18) {
-    console.log("Great job," +name +"! Your total par was: -"+totalputts+"");
-} else {
-    alert("Good game, "+ name". Your total par was 0.");
-}
+if (Total > Par) {
+    console.log(`Nice try,${name}! Your total was ${Addsum}`);
+} else if (Total < Par) {
+    console.log(`Great Job,${name}! Your total was ${Addsum}`);
+} else (Total == Par) 
+    console.log(`Good game,${name}! Your total was ${Addsum}`);
